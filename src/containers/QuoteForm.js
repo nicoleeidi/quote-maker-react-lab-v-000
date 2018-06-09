@@ -8,7 +8,7 @@ export class QuoteForm extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      content: '', 
+      content: '',
       author: '',
     }
   }
@@ -25,7 +25,7 @@ export class QuoteForm extends Component {
     const quote = Object.assign({}, this.state, { id: uuid() });
     this.props.addQuote(quote);
     this.setState({
-      content: '', 
+      content: '',
       author: ''
     });
   }
@@ -41,7 +41,7 @@ export class QuoteForm extends Component {
                   <div className="form-group">
                     <label htmlFor="content" className="col-md-4 control-label">Quote</label>
                     <div className="col-md-5">
-                      <textarea 
+                      <textarea
                         className="form-control"
                         name="content"
                         value={this.state.content}
@@ -52,12 +52,12 @@ export class QuoteForm extends Component {
                   <div className="form-group">
                     <label htmlFor="author" className="col-md-4 control-label">Author</label>
                     <div className="col-md-5">
-                      <input 
+                      <input
                         className="form-control"
                         type="text"
                         name="author"
                         value={this.state.author}
-                        onChange={this.handleOnChange} 
+                        onChange={this.handleOnChange}
                       />
                     </div>
                   </div>
